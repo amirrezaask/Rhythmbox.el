@@ -1,0 +1,10 @@
+#+TITLE: Rhythmbox Controller for Emacs
+#+AUTHOR: AmirrezaAsk
+* Intro
+Concept of the package is borrowed from =helm= and =ivy= controllers for Rhythmbox but rewritten to use Emacs internal =completing-read= function.
+Allows you to controll Rhythmbox inside Emacs.
+* Installation
+Currently the only way is to download and put the file in your =load-path= or use something like =straight.el= or =Qelpa=.
+* Credits
++ =Helm=
++ =Ivy=
