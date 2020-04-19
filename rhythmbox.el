@@ -48,6 +48,7 @@
 ;;;###autoload
 (defun Rhythmbox/current-song-name ()
   "Return the currently playing song title."
+  (interactive)
   (ignore-errors
     (let* ((entry (dbus-get-property
                    :session
@@ -58,7 +59,7 @@
            (artist (caar (cadr (assoc "xesam:artist" entry))))
            (album (cl-caadr (assoc "xesam:album" entry)))
            (title (cl-caadr (assoc "xesam:title" entry))))
-      (format "%s - %s - %s" artist album title))))
+      (message (format "%s - %s - %s" artist album title)))))
 
 
 ;;;###autoload
