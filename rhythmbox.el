@@ -33,6 +33,7 @@
         (interface "org.mpris.MediaPlayer2.Player"))
     (dbus-call-method :session service path interface "OpenUri" (cdr song))))
 
+;;;###autoload
 (defun Rhythmbox/playpause-current-song ()
   "Play/pause the current song."
   (interactive)
@@ -44,6 +45,7 @@
 
 (defvar Rhythmbox/songs nil "List of songs in library.")
 
+;;;###autoload
 (defun Rhythmbox/current-song-name ()
   "Return the currently playing song title."
   (ignore-errors
