@@ -23,7 +23,7 @@
 ;; 
 
 ;;; Code:
-
+(require 'dbus)
 
 (defun Rhythmbox/play-song (song)
   "Let Rhythmbox play SONG."
@@ -66,7 +66,7 @@
 (defun Rhythmbox (&rest arg)
   "Load list of songs in Rhythmbox library using given ARG."
   (interactive "P")
-  (require 'dbus)
+
   (when (null Rhythmbox/songs)
     (let* ((service "org.gnome.Rhythmbox3")
            (path "/org/gnome/UPnP/MediaServer2/Library/all")
